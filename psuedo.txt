@@ -1,0 +1,50 @@
+touch index.html, welcome.html, script.js, style.css
+HTML:
+  - set up basic boiler plate with ! tab
+  - link rel to css file
+  - script src to js file
+  - set up a div with a id of "game-squares"  with 30 nested divs for the gameboard 5x6
+  - set up a div with an id of "key-squares" 28 buttons to as a keyboard to represent each letter on a keyboard + enter and delete button
+  - // add more if neccesary
+  - // add more if neccesary
+
+CSS:
+  - style game-squares as display flex, justify content: center, align-items: center,
+    - style each div/square inside with a specific width, height, border, small margin to separate each box
+  - style the key-squares the same way but a little smaller
+    - style the delete and enter buttons to be bigger than rest, add a class to them and style them together
+
+JS:
+  -create a const  array named "secretWords" that holds words that will be the "secret" words
+    - will start with a small array of 5ish words first
+
+  - create a constant vairable named "maxGuesses" to hold the maximum ammount of guesses that a player can guess which is 6
+
+  create a variable "remainingGueses" to store the remaining gueses
+
+  - create a function "render"  that updates the gameboard after each guess.
+    - update the letters guessed
+    -display remaining gueses
+    - check if player won or not
+
+  - create a variable called "guessedWords" that is an empty array that will hold the already guessed words inside or it, maybe nested array because i need to put multiple guessed words inside of it
+
+  - create a variable for the available space left in the game
+    - if available space
+
+  - store the keys from keyboard in a variable named "keyboardEl" using document.queryselector
+    - add an event listener to each of the keys
+    - call handleClick function
+
+  - store the divs in a variable named "gameBoardEl"
+
+  - create a function "handleClick"
+    - use event.target to see if letter clicked === enter or ==== delete key
+
+  - Create a function "init" or "startGame" that initializes the game, selects a random word from the secretWords array, and makes the board blank
+
+  - create a funnction named "checkWord" that when the player hits enter on the keyboard, the function compares the players guess to the "secret" word from the array. It will also update that particular column of the gameboard and update any specific square if that letter is either in the "secretWord" or in the correct position in the column. and make sure that the word is only. compares
+
+  - create a function named "correctWord" that will display the current random "secretWord"
+
+  - create a "endGame" function that ends the game if player has won or lost, display a message if they want to play again.
