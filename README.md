@@ -24,7 +24,9 @@
 
 ### **_Screenshots_**
 
-##### Picture of finished game 1
+##### Wire Frame
+
+![WireFrame](Untitled%20Diagram.jpg)
 
 ##### Picture of finished game 2
 
@@ -45,5 +47,7 @@
 ### **_Credits_**
 
 ##### Dog Source: [GameDescription](https://prowritingaid.com/what-is-wordle#:~:text=Wordle%20is%20a%20daily%20word,each%20letter%20in%20your%20guess.)
+
+##### Draw.io: [draw.io](https://drive.google.com/file/d/1q8A8xnNh3Agsj4m_jOws7HF9jO3nkQEP/view?usp=sharing)
 
 ---
