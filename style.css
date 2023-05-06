@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+}
+
+ .start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+}
+
+.description {
+  text-align: center;
+  border: 1px solid black;
+  padding: 20px;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.description h1 {
+  font-size: 50px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 20px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 2px;
+  padding: 10px;
+}
+
+.description a {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: rgb(84, 84, 87);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.description a:hover {
+  background-color: rgb(116, 116, 120);
+}
+/* End of start game styling */
+
+#main-html, #main-body {
+  height: 100%;
+}
+
+#game-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  background-color: black;
+}
+
+#main-header {
+  border-bottom: 2px solid rgb(58, 58, 60);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  color: white;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
