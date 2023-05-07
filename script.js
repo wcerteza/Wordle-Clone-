@@ -11,3 +11,10 @@ const createGameBoard = () => {
 window.onload = () => {
   createGameBoard()
 }
+
+const keyBoard = document.querySelectorAll('button')
+keyBoard.forEach((key) => {
+  key.addEventListener('click', (event) => {
+    console.log(event.target.innerText)
+  })
+})

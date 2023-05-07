@@ -109,3 +109,23 @@
   width: 100%;
   margin: 0 auto 8px;
 }
+
+button {
+  background-color: rgb(129, 131, 132);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 2px;
+  height: 50px;
+  width: 45px;
+  text-transform: capitalize;
+  font-family: 'Open Sans';
+}
+
+#delete, #enter {
+  width: 70px;
+}
+
+button:hover {
+  background-color: rgb(173, 178, 180);
+}
