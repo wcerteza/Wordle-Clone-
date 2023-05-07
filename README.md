@@ -46,8 +46,12 @@
 
 ### **_Credits_**
 
-##### Dog Source: [GameDescription](https://prowritingaid.com/what-is-wordle#:~:text=Wordle%20is%20a%20daily%20word,each%20letter%20in%20your%20guess.)
+##### README desc: [GameDescription](https://prowritingaid.com/what-is-wordle#:~:text=Wordle%20is%20a%20daily%20word,each%20letter%20in%20your%20guess.)
 
 ##### Draw.io: [draw.io](https://drive.google.com/file/d/1q8A8xnNh3Agsj4m_jOws7HF9jO3nkQEP/view?usp=sharing)
+
+##### JS windowonLoad: [mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)
+
+##### Data Attr: [W3schools](https://www.w3schools.com/tags/att_data-.asp)
 
 ---
