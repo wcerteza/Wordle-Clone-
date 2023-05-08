@@ -26,12 +26,26 @@ const handleDelete = () => {
   }
 }
 
+const handleEnter = () => {
+  if (currentGuess.length === 5) {
+    const userGuess = currentGuess.join('').toUpperCase()
+    if (secretWord === userGuess) {
+      console.log('YOU WIN')
+    } else {
+      currentLetter + 1
+      currentGuess = []
+    }
+  }
+}
+
 const handleClick = (event) => {
   const keyText = event.target.textContent
   const currentDiv = document.getElementById(currentLetter)
 
   if (keyText === 'Del') {
     handleDelete()
+  } else if (keyText === 'Enter') {
+    handleEnter()
   } else if (currentGuess.length >= 5) {
     return
   } else {
