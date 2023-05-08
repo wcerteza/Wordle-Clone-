@@ -1,7 +1,9 @@
 const secretWord = 'EARTH'
 let currentGuess = []
 let currentLetter = 1
+let gameOver = false
 const guessGrid = document.getElementById('game')
+const messageEl = document.getElementById('message-el')
 
 const createGameBoard = () => {
   const gameBoard = document.getElementById('game')
@@ -13,12 +15,10 @@ const createGameBoard = () => {
   }
 }
 
-window.onload = () => {
-  createGameBoard()
-}
+createGameBoard()
 
 const handleDelete = () => {
-  if (currentGuess.length > 0) {
+  if (!gameOver && currentGuess.length > 0) {
     currentLetter--
     currentGuess.pop()
     const previousSpace = document.getElementById(currentLetter)
@@ -30,7 +30,8 @@ const handleEnter = () => {
   if (currentGuess.length === 5) {
     const userGuess = currentGuess.join('').toUpperCase()
     if (secretWord === userGuess) {
-      console.log('YOU WIN')
+      messageEl.innerText = 'You Win!'
+      gameOver = true
     } else {
       currentLetter + 1
       currentGuess = []
