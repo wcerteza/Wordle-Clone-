@@ -17,17 +17,21 @@ window.onload = () => {
   createGameBoard()
 }
 
+const handleDelete = () => {
+  if (currentGuess.length > 0) {
+    currentLetter--
+    currentGuess.pop()
+    const previousSpace = document.getElementById(currentLetter)
+    previousSpace.textContent = ''
+  }
+}
+
 const handleClick = (event) => {
   const keyText = event.target.textContent
   const currentDiv = document.getElementById(currentLetter)
 
   if (keyText === 'Del') {
-    if (currentGuess.length > 0) {
-      currentLetter--
-      currentGuess.pop()
-      const previousSpace = document.getElementById(currentLetter)
-      previousSpace.textContent = ''
-    }
+    handleDelete()
   } else if (currentGuess.length >= 5) {
     return
   } else {
