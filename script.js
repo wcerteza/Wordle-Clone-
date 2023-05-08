@@ -1,5 +1,5 @@
 const secretWord = 'EARTH'
-let currentGuess = ''
+let currentGuess = []
 let currentLetter = 1
 const guessGrid = document.getElementById('game')
 
@@ -19,11 +19,22 @@ window.onload = () => {
 
 const handleClick = (event) => {
   const keyText = event.target.textContent
-  if (currentGuess.length >= 5) return
   const currentDiv = document.getElementById(currentLetter)
-  currentDiv.textContent = keyText
-  currentLetter++
-  currentGuess += keyText
+
+  if (keyText === 'Del') {
+    if (currentGuess.length > 0) {
+      currentLetter--
+      currentGuess.pop()
+      const previousSpace = document.getElementById(currentLetter)
+      previousSpace.textContent = ''
+    }
+  } else if (currentGuess.length >= 5) {
+    return
+  } else {
+    currentDiv.textContent = keyText
+    currentLetter++
+    currentGuess.push(keyText)
+  }
 }
 
 const keyBoard = document.querySelectorAll('button')

@@ -119,6 +119,8 @@
 button {
   background-color: rgb(129, 131, 132);
   color: white;
+  font-weight: bold;
+  font-size: 15px;
   border: none;
   border-radius: 3px;
   margin: 2px;
