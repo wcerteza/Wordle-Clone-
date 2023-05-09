@@ -147,3 +147,11 @@ button:hover {
   background-color: black;
   margin-bottom: 30px;
 }
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
