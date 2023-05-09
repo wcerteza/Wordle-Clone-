@@ -1,10 +1,34 @@
-const secretWord = 'EARTH'
+const secretWordArr = [
+  'PURSE',
+  'HOUSE',
+  'BREAD',
+  'CHAIR',
+  'GLOVE',
+  'SHAKY',
+  'CRAVE',
+  'BINGE',
+  'STARE',
+  'GLOOM',
+  'SWOOP',
+  'CRISP',
+  'BRISK',
+  'STASH',
+  'STEEP',
+  'BORED',
+  'TWEAK',
+  'OLIVE',
+  'BLINK',
+  'ELBOW',
+  'RIVAL'
+]
+
+let randomWord = secretWordArr[Math.floor(Math.random() * secretWordArr.length)]
+let secretWord = randomWord.split('')
 const guesses = []
 let currentGuess = []
 let currentLetter = 1
 let gameOver = false
 
-const guessGrid = document.getElementById('game')
 const messageEl = document.getElementById('message-el')
 const gameBoard = document.getElementById('game')
 const squares = document.querySelectorAll('.square')
@@ -56,8 +80,6 @@ const handleEnter = () => {
         currentDiv.style.backgroundColor = '#787c7f'
         currentDiv.style.borderColor = '#787c7f'
       }
-      console.log(currentDiv)
-      console.log(guessState)
     }
     if (numCorrectLetters === secretWord.length) {
       messageEl.innerText = 'You Win!'
