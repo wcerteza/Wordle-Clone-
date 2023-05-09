@@ -77,7 +77,7 @@
   color: white;
   font-size: 50px;
   letter-spacing: 3px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 }
 
 #game {
@@ -99,6 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #keyboard {
@@ -120,14 +121,14 @@ button {
   background-color: rgb(129, 131, 132);
   color: white;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   border: none;
   border-radius: 3px;
   margin: 2px;
   height: 50px;
   width: 45px;
   text-transform: capitalize;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   cursor: pointer;
 }
 
@@ -142,16 +143,8 @@ button:hover {
 #message-el {
   color: white;
   font-weight: bold;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 40px;
   background-color: black;
   margin-bottom: 30px;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.green {
-  background-color: green;
 }

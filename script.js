@@ -47,12 +47,17 @@ const handleEnter = () => {
     for (let i = 0; i < userGuess.length; i++) {
       const currentDiv = document.getElementById(currentRow * 5 + i + 1)
       if (guessState[i] === 'correct') {
-        currentDiv.style.backgroundColor = 'green'
+        currentDiv.style.backgroundColor = '#6ca965'
+        currentDiv.style.borderColor = '#6ca965'
       } else if (guessState[i] === 'included') {
-        currentDiv.style.backgroundColor = 'yellow'
+        currentDiv.style.backgroundColor = '#c8b653'
+        currentDiv.style.borderColor = '#c8b653'
       } else {
-        currentDiv.style.backgroundColor = 'grey'
+        currentDiv.style.backgroundColor = '#787c7f'
+        currentDiv.style.borderColor = '#787c7f'
       }
+      console.log(currentDiv)
+      console.log(guessState)
     }
     if (numCorrectLetters === secretWord.length) {
       messageEl.innerText = 'You Win!'
