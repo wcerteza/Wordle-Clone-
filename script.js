@@ -52,6 +52,7 @@ const playAgain = () => {
   currentLetter = 1
   gameOver = true
   messageEl.innerText = ''
+  replayBtn.style.backgroundColor = 'black'
 
   squares.forEach((square) => {
     square.style.backgroundColor = ''
@@ -113,6 +114,7 @@ const handleEnter = () => {
         messageEl.innerText = `You lose... the correct word was ${secretWord
           .join('')
           .toUpperCase()}`
+        replayBtn.style.backgroundColor = 'white'
       }
     }
   }
