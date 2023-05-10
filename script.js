@@ -88,6 +88,7 @@ const handleEnter = () => {
         guessState.push('incorrect')
       }
     }
+
     guesses.push(guessState)
     const currentRow = guesses.length - 1
     for (let i = 0; i < userGuess.length; i++) {
@@ -102,7 +103,20 @@ const handleEnter = () => {
         currentDiv.style.backgroundColor = '#787c7f'
         currentDiv.style.borderColor = '#787c7f'
       }
+
+      currentDiv.animate(
+        [
+          { transform: 'rotateY(0deg)' },
+          { transform: 'rotateY(90deg)' },
+          { transform: 'rotateY(0deg)' }
+        ],
+        {
+          duration: 900,
+          easing: 'ease-out'
+        }
+      )
     }
+
     if (numCorrectLetters === secretWord.length) {
       messageEl.innerText = 'You Win!'
       gameOver = true

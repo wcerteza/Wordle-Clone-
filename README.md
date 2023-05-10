@@ -44,7 +44,7 @@
 
 ---
 
-### **_Credits_**
+### **_Refrences_**
 
 ##### README desc: [GameDescription](https://prowritingaid.com/what-is-wordle#:~:text=Wordle%20is%20a%20daily%20word,each%20letter%20in%20your%20guess.)
 
@@ -59,5 +59,7 @@
 ##### YouTube: [YouTube](https://www.youtube.com/watch?v=j7OhcuZQ-q8)
 
 ##### weekendWebDev: [weekendWebDev](https://weekendwebdev.substack.com/p/-18-build-a-wordle-clone-with-javascript)
+
+##### thoughtBot: [thoughtBOT](https://thoughtbot.com/blog/transitions-and-transforms)
 
 ---

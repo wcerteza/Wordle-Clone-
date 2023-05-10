@@ -2,7 +2,7 @@
   margin: 0;
 }
 
- .start {
+.start {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,4 +167,19 @@ button:hover {
   text-transform: capitalize;
   font-family: 'Open Sans', sans-serif;
   cursor: pointer;
+}
+
+.animate-flip {
+  animation-name: flip;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
 }
