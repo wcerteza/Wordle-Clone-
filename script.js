@@ -32,8 +32,10 @@ let gameOver = false
 const messageEl = document.getElementById('message-el')
 const gameBoard = document.getElementById('game')
 const squares = document.querySelectorAll('.square')
+const replayBtn = document.getElementById('play-again')
 
 const createGameBoard = () => {
+  gameBoard.innerHTML = ''
   for (let i = 0; i < 30; i++) {
     const gameSquare = document.createElement('div')
     gameSquare.classList.add('square')
@@ -42,9 +44,24 @@ const createGameBoard = () => {
   }
 }
 
-const reloadScreen = () => {
-  location.reload()
+const playAgain = () => {
+  randomWord = secretWordArr[Math.floor(Math.random() * secretWordArr.length)]
+  secretWord = randomWord.split('')
+  guesses.length = 0
+  currentGuess.length = 0
+  currentLetter = 1
+  gameOver = true
+  messageEl.innerText = ''
+
+  squares.forEach((square) => {
+    square.style.backgroundColor = ''
+    square.style.borderColor = ''
+    square.textContent = ''
+  })
+  createGameBoard()
 }
+
+replayBtn.addEventListener('click', playAgain)
 
 const handleDelete = () => {
   if (!gameOver && currentGuess.length > 0) {
@@ -88,9 +105,15 @@ const handleEnter = () => {
     if (numCorrectLetters === secretWord.length) {
       messageEl.innerText = 'You Win!'
       gameOver = true
+      replayBtn.style.backgroundColor = 'white'
     } else {
       currentLetter + 1
       currentGuess = []
+      if (guesses.length === 6) {
+        messageEl.innerText = `You lose... the correct word was ${secretWord
+          .join('')
+          .toUpperCase()}`
+      }
     }
   }
 }
