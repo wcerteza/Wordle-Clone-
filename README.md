@@ -54,4 +54,10 @@
 
 ##### Data Attr: [W3schools](https://www.w3schools.com/tags/att_data-.asp)
 
+##### freeCodeCamp: [FreeCodeCamp](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/)
+
+##### YouTube: [YouTube](https://www.youtube.com/watch?v=j7OhcuZQ-q8)
+
+##### weekendWebDev: [weekendWebDev](https://weekendwebdev.substack.com/p/-18-build-a-wordle-clone-with-javascript)
+
 ---
