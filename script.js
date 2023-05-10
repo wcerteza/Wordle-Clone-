@@ -21,7 +21,7 @@ const secretWordArr = [
   'ELBOW',
   'RIVAL'
 ]
-
+//axios/api call
 let randomWord = secretWordArr[Math.floor(Math.random() * secretWordArr.length)]
 let secretWord = randomWord.split('')
 const guesses = []
@@ -40,6 +40,10 @@ const createGameBoard = () => {
     gameSquare.setAttribute('id', i + 1)
     gameBoard.appendChild(gameSquare)
   }
+}
+
+const reloadScreen = () => {
+  location.reload()
 }
 
 const handleDelete = () => {
@@ -107,7 +111,7 @@ const handleClick = (event) => {
   }
 }
 
-const keyBoard = document.querySelectorAll('button')
+const keyBoard = document.querySelectorAll('[Data-Key]')
 keyBoard.forEach((key) => {
   key.addEventListener('click', handleClick)
 })
