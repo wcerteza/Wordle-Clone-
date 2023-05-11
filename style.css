@@ -169,7 +169,7 @@ button:hover {
   cursor: pointer;
 }
 
-.animate-flip {
+/* .square.flip{
   animation-name: flip;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -182,4 +182,8 @@ button:hover {
   to {
     transform: rotateY(180deg);
   }
+} */
+.animate__animated.animate__bounce {
+  --animate-delay: 100s;
+  animation-duration: 100s;
 }

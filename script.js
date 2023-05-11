@@ -86,31 +86,28 @@ const handleEnter = () => {
     guesses.push(guessState)
     const currentRow = guesses.length - 1
     if (gameOver !== true) {
-      for (let i = 0; i < userGuess.length; i++) {
-        const currentDiv = document.getElementById(currentRow * 5 + i + 1)
-        if (guessState[i] === 'correct') {
-          currentDiv.style.backgroundColor = '#6ca965'
-          currentDiv.style.borderColor = '#6ca965'
-        } else if (guessState[i] === 'included') {
-          currentDiv.style.backgroundColor = '#c8b653'
-          currentDiv.style.borderColor = '#c8b653'
-        } else {
-          currentDiv.style.backgroundColor = '#787c7f'
-          currentDiv.style.borderColor = '#787c7f'
-        }
-
-        currentDiv.animate(
-          [
-            { transform: 'rotateY(0deg)' },
-            { transform: 'rotateY(90deg)' },
-            { transform: 'rotateY(0deg)' }
-          ],
-          {
-            duration: 900,
-            easing: 'ease-out'
+      let i = 0
+      const interval = setInterval(() => {
+        if (i < userGuess.length) {
+          const currentDiv = document.getElementById(currentRow * 5 + i + 1)
+          if (guessState[i] === 'correct') {
+            currentDiv.style.backgroundColor = '#6ca965'
+            currentDiv.style.borderColor = '#6ca965'
+            currentDiv.classList.add('animate__animated', 'animate__flipInX')
+          } else if (guessState[i] === 'included') {
+            currentDiv.style.backgroundColor = '#c8b653'
+            currentDiv.style.borderColor = '#c8b653'
+            currentDiv.classList.add('animate__animated', 'animate__flipInX')
+          } else {
+            currentDiv.style.backgroundColor = '#787c7f'
+            currentDiv.style.borderColor = '#787c7f'
+            currentDiv.classList.add('animate__animated', 'animate__flipInX')
           }
-        )
-      }
+          i++
+        } else {
+          clearInterval(interval)
+        }
+      }, 300)
     }
 
     if (numCorrectLetters === secretWord.length) {

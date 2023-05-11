@@ -58,9 +58,15 @@
 
 ##### freeCodeCamp: [FreeCodeCamp](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/)
 
+###### Took inspiration from this and barely refrenced this
+
 ##### YouTube: [YouTube](https://www.youtube.com/watch?v=j7OhcuZQ-q8)
 
+###### Drew inspiration from this to start, refrenced this for the ending animation as well as found the API to use from here
+
 ##### weekendWebDev: [weekendWebDev](https://weekendwebdev.substack.com/p/-18-build-a-wordle-clone-with-javascript)
+
+###### refrenced
 
 ##### thoughtBot: [thoughtBOT](https://thoughtbot.com/blog/transitions-and-transforms)
 
