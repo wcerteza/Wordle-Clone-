@@ -1,33 +1,28 @@
-const secretWordArr = [
-  'PURSE',
-  'HOUSE',
-  'BREAD',
-  'CHAIR',
-  'GLOVE',
-  'SHAKY',
-  'CRAVE',
-  'BINGE',
-  'STARE',
-  'GLOOM',
-  'SWOOP',
-  'CRISP',
-  'BRISK',
-  'STASH',
-  'STEEP',
-  'BORED',
-  'TWEAK',
-  'OLIVE',
-  'BLINK',
-  'ELBOW',
-  'RIVAL'
-]
-//axios/api call
-let randomWord = secretWordArr[Math.floor(Math.random() * secretWordArr.length)]
-let secretWord = randomWord.split('')
+let randomWord
+let secretWord
 const guesses = []
 let currentGuess = []
 let currentLetter = 1
 let gameOver = false
+
+const fetchrandomWord = async () => {
+  const url = 'https://wordsapiv1.p.rapidapi.com/words/?random=true&letters=5'
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': apiKey,
+      'X-RapidAPI-Host': apiWhatever
+    }
+  }
+  try {
+    const response = await fetch(url, options)
+    const result = await response.json()
+    console.log(result.word)
+    randomWord = result.word.toUpperCase()
+    secretWord = randomWord.split('')
+  } catch (error) {}
+}
+fetchrandomWord()
 
 const messageEl = document.getElementById('message-el')
 const gameBoard = document.getElementById('game')
@@ -45,12 +40,11 @@ const createGameBoard = () => {
 }
 
 const playAgain = () => {
-  randomWord = secretWordArr[Math.floor(Math.random() * secretWordArr.length)]
-  secretWord = randomWord.split('')
+  fetchrandomWord()
   guesses.length = 0
   currentGuess.length = 0
   currentLetter = 1
-  gameOver = true
+  gameOver = false
   messageEl.innerText = ''
   replayBtn.style.backgroundColor = 'black'
 
@@ -91,30 +85,32 @@ const handleEnter = () => {
 
     guesses.push(guessState)
     const currentRow = guesses.length - 1
-    for (let i = 0; i < userGuess.length; i++) {
-      const currentDiv = document.getElementById(currentRow * 5 + i + 1)
-      if (guessState[i] === 'correct') {
-        currentDiv.style.backgroundColor = '#6ca965'
-        currentDiv.style.borderColor = '#6ca965'
-      } else if (guessState[i] === 'included') {
-        currentDiv.style.backgroundColor = '#c8b653'
-        currentDiv.style.borderColor = '#c8b653'
-      } else {
-        currentDiv.style.backgroundColor = '#787c7f'
-        currentDiv.style.borderColor = '#787c7f'
-      }
-
-      currentDiv.animate(
-        [
-          { transform: 'rotateY(0deg)' },
-          { transform: 'rotateY(90deg)' },
-          { transform: 'rotateY(0deg)' }
-        ],
-        {
-          duration: 900,
-          easing: 'ease-out'
+    if (gameOver !== true) {
+      for (let i = 0; i < userGuess.length; i++) {
+        const currentDiv = document.getElementById(currentRow * 5 + i + 1)
+        if (guessState[i] === 'correct') {
+          currentDiv.style.backgroundColor = '#6ca965'
+          currentDiv.style.borderColor = '#6ca965'
+        } else if (guessState[i] === 'included') {
+          currentDiv.style.backgroundColor = '#c8b653'
+          currentDiv.style.borderColor = '#c8b653'
+        } else {
+          currentDiv.style.backgroundColor = '#787c7f'
+          currentDiv.style.borderColor = '#787c7f'
         }
-      )
+
+        currentDiv.animate(
+          [
+            { transform: 'rotateY(0deg)' },
+            { transform: 'rotateY(90deg)' },
+            { transform: 'rotateY(0deg)' }
+          ],
+          {
+            duration: 900,
+            easing: 'ease-out'
+          }
+        )
+      }
     }
 
     if (numCorrectLetters === secretWord.length) {
