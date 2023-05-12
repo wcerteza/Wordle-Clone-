@@ -46,6 +46,14 @@
 
 ---
 
+### **_Play Game_**
+
+##### Play Real Game: [wordle](https://www.nytimes.com/games/wordle/index.html)
+
+##### Play My Game: [Wordle Clone](willc-wordle-clone.surge.sh)
+
+---
+
 ### **_Refrences_**
 
 ##### README desc: [GameDescription](https://prowritingaid.com/what-is-wordle#:~:text=Wordle%20is%20a%20daily%20word,each%20letter%20in%20your%20guess.)
@@ -71,5 +79,7 @@
 ##### thoughtBot: [thoughtBOT](https://thoughtbot.com/blog/transitions-and-transforms)
 
 ##### animateCSS: [AnimateCSS](https://animate.style/)
+
+###### inspiration for the similar animation square flips
 
 ---
