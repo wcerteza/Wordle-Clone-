@@ -60,7 +60,7 @@
 
 ###### Took inspiration from this and barely refrenced this
 
-##### YouTube: [YouTube](https://www.youtube.com/watch?v=j7OhcuZQ-q8)
+##### Ian Lenehan: [Ian Lenehan](https://www.youtube.com/watch?v=j7OhcuZQ-q8)
 
 ###### Drew inspiration from this to start, refrenced this for the ending animation as well as found the API to use from here
 
@@ -69,5 +69,7 @@
 ###### refrenced
 
 ##### thoughtBot: [thoughtBOT](https://thoughtbot.com/blog/transitions-and-transforms)
+
+##### animateCSS: [AnimateCSS](https://animate.style/)
 
 ---

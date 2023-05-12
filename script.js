@@ -22,7 +22,6 @@ const fetchrandomWord = async () => {
     secretWord = randomWord.split('')
   } catch (error) {}
 }
-fetchrandomWord()
 
 const messageEl = document.getElementById('message-el')
 const gameBoard = document.getElementById('game')
@@ -149,3 +148,4 @@ keyBoard.forEach((key) => {
 })
 
 createGameBoard()
+fetchrandomWord()
