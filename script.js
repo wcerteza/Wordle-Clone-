@@ -17,7 +17,6 @@ const fetchrandomWord = async () => {
   try {
     const response = await fetch(url, options)
     const result = await response.json()
-    console.log(result.word)
     randomWord = result.word.toUpperCase()
     secretWord = randomWord.split('')
   } catch (error) {}
